@@ -195,7 +195,7 @@ $q = "
 				<div id="content" class="village2" style="font-size: 9pt;">
 					<img src="../gpack/travian_default/img/misc/win.png" align="right" style="padding-top: 40px;">
 					<p>
-					<b>Dear <?php echo SERVER_NAME; ?> Players,</b>
+					<b>Dear <?php echo SERVER_NAME; ?> Mieli žaidėjai,</b>
 					<br /><br />
 					All good things must come to an end, and so too must this age. Once solomon was given a ring, upon which was inscribed a message that could take away all
 					the joys or sorrows of the world, that message was roughly translated "this too shall pass". It is both our joy and sorrow to announce to all Players that
