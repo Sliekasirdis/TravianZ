@@ -73,7 +73,7 @@ if(isset($_POST['result'])) {
     echo "<p>";
     if (isset($_POST['result'][7])&&isset($_POST['result'][8])){
         if ($form->getValue('ktyp') == 1) {
-            echo "Hint: The ram does not work during a raid.<br>";
+            echo "Patarimas: Taranas neveikia vykstant reidui.<br>";
         }elseif ($_POST['result'][8]>$_POST['result'][7]){
             echo "Damage done by ram: from level <b>".$form->getValue('walllevel')."</b> to level <b>0</b></p>";
         }elseif ($_POST['result'][8]==0){
@@ -97,7 +97,7 @@ if(isset($_POST['result'])) {
             //$Katalife=round($_POST['result'][4]-($_POST['result'][4]*$_POST['result'][1]));
             //$totallvl = round($form->getValue('kata')-($form->getValue('kata') * $demolish));
             $totallvl = round(sqrt(pow(($form->getValue('kata')+0.5),2)-($_POST['result'][4]*8)));
-            echo "Damage done by catapult: from level <b>".$form->getValue('kata')."</b> to level <b>".$totallvl."</b></p>";
+            echo "Katapultos padaryta žala: nuo lygio <b>".$form->getValue('kata')."</b> iki lygio <b>".$totallvl."</b></p>";
         }
     } 
 }
@@ -110,7 +110,7 @@ if(count($target) > 0) {
 	<thead>
 		<tr>
 			<th>
-				Defender <span class=\"small\"></span>
+				Gynėjas <span class=\"small\"></span>
 			</th>
 		</tr>
 	</thead>";
@@ -123,21 +123,21 @@ if(count($target) > 0) {
 ?>
 <table id="select" cellpadding="1" cellspacing="1">
 <thead><tr>
-	<td>Attacker</td>
-	<td>Defender</td>
-	<td>Type of attack</td>
+	<td>Puolėjas</td>
+	<td>Gynėjas</td>
+	<td>Atakos tipas</td>
 </tr></thead>
 <tbody><tr>
 	<td>
-		<label><input class="radio" type="radio" name="a1_v" value="1" <?php if($tribe == 1) { echo "checked"; } ?>> Romans</label><br/>
-		<label><input class="radio" type="radio" name="a1_v" value="2" <?php if($tribe == 2) { echo "checked"; } ?>> Teutons</label><br/>
-		<label><input class="radio" type="radio" name="a1_v" value="3" <?php if($tribe == 3) { echo "checked"; } ?>> Gauls</label>
+		<label><input class="radio" type="radio" name="a1_v" value="1" <?php if($tribe == 1) { echo "checked"; } ?>> Romėnai</label><br/>
+		<label><input class="radio" type="radio" name="a1_v" value="2" <?php if($tribe == 2) { echo "checked"; } ?>> Germanai</label><br/>
+		<label><input class="radio" type="radio" name="a1_v" value="3" <?php if($tribe == 3) { echo "checked"; } ?>> Galai</label>
 	</td><td>
-		<label><input class="check" type="checkbox" name="a2_v1" value="1" <?php if(in_array(1,$target)) { echo "checked"; } ?>> Romans</label><br/>
+		<label><input class="check" type="checkbox" name="a2_v1" value="1" <?php if(in_array(1,$target)) { echo "checked"; } ?>> Romėnai</label><br/>
 
-		<label><input class="check" type="checkbox" name="a2_v2" value="1" <?php if(in_array(2,$target)) { echo "checked"; } ?>> Teutons</label><br/>
-		<label><input class="check" type="checkbox" name="a2_v3" value="1" <?php if(in_array(3,$target)) { echo "checked"; } ?>> Gauls</label><br/>
-		<label><input class="check" type="checkbox" name="a2_v4" value="1" <?php if(in_array(4,$target)) { echo "checked"; } ?>> Nature</label>
+		<label><input class="check" type="checkbox" name="a2_v2" value="1" <?php if(in_array(2,$target)) { echo "checked"; } ?>> Germanai</label><br/>
+		<label><input class="check" type="checkbox" name="a2_v3" value="1" <?php if(in_array(3,$target)) { echo "checked"; } ?>> Galai</label><br/>
+		<label><input class="check" type="checkbox" name="a2_v4" value="1" <?php if(in_array(4,$target)) { echo "checked"; } ?>> Gamta</label>
 		</td><td>
 		<label><input class="radio" type="radio" name="ktyp" value="0" <?php if($form->getValue('ktyp') == 0 || $form->getValue('ktyp') == "") { echo "checked"; } ?>> normal</label><br/>
 
@@ -174,7 +174,7 @@ Calculated in <b><?php
 echo round(($generator->pageLoadTimeEnd()-$start)*1000);
 ?></b> ms
 
-<br />Server time: <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
+<br />Serverio laikas: <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
 </div>
 	</div>
 </div>
